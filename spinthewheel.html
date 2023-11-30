@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="Http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/Winwheel.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" type="image/x-icon" href="logofix.png">
+
+    <title>Protinkafe</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .the_wheel {
+            background-image: url(./basic_code_wheel/wheel_back.png);
+            background-position: center;
+            background-repeat: none;
+        }
+
+        .tengah {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <h1>Protinkafe<span>.</span></h1>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#service">Service</a></li>
+                    <li><a href="index.html#menu">Product</a></li>
+                    <li><a href="index.html#testimoni">Testimoni</a></li>
+                    <li><a href="index.html#chefs">Our Team</a></li>
+                    <li><a href="/spinthewheel.html">Spin The Wheel</a></li>
+                </ul>
+            </nav>
+
+            <a class="btn-book-a-table" href="login.html">Login</a>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        </div>
+    </header>
+    <section id="hero" class="hero d-flex align-items-center section-bg">
+        <div class="container">
+            <div class="justify-content-center">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="d-grid gap-2 col-md-4 mx-auto">
+                        <button class="btn" id="spin" style="background-color: #ffc107;" type="button">Spin</button>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+
+                <table class="tengah" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td></td>
+                        <td width="438" height="582" class="the_wheel align-middle" align="center" valign="center">
+                            <canvas id="canvas" width="434" height="434">
+                                <p style="{color: white}" align="center"></p>
+                            </canvas>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="footer">
+
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <i class="bi bi-geo-alt icon"></i>
+                    <div>
+                        <h4>Alamat</h4>
+                        <p>
+                            Jl Smea <br>
+                            No 28<br>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-telephone icon"></i>
+                    <div>
+                        <h4>Pesan</h4>
+                        <p>
+                            <strong>Phone:</strong> +62 8123 4567 8901<br>
+                            <strong>Email:</strong> Protin@cafe.com<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-clock icon"></i>
+                    <div>
+                        <h4>Jam Buka</h4>
+                        <p>
+                            <strong>Setiap Hari : 09.00 - 00.00</strong><br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Follow Us</h4>
+                    <div class="social-links d-flex">
+                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Protinkafe</span></strong>
+            </div>
+            <div class="credits">
+
+                Designed by Kelompok 8
+            </div>
+        </div>
+
+    </footer>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Create new wheel object specifying the parameters at creation time.
+        let theWheel = new Winwheel({
+            'numSegments': 8,     // Specify number of segments.
+            'outerRadius': 212,   // Set outer radius so wheel fits inside the background.
+            'textFontSize': 20,    // Set font size as desired.
+            'segments':        // Define segments including colour and text.
+                [
+                    { 'fillStyle': '#eae56f', 'text': 'Es Teh' },
+                    { 'fillStyle': '#89f26e', 'text': 'Kopi 2x' },
+                    { 'fillStyle': '#7de6ef', 'text': 'Voucher 20k' },
+                    { 'fillStyle': '#e7706f', 'text': 'voucher 5k' },
+                    { 'fillStyle': '#eae56f', 'text': 'Ayam Geprek' },
+                    { 'fillStyle': '#89f26e', 'text': 'Belum Beruntung' },
+                    { 'fillStyle': '#7de6ef', 'text': 'Air Putih' },
+                    { 'fillStyle': '#e7706f', 'text': 'No Wa kasir' }
+                ],
+            'animation':           // Specify the animation to use.
+            {
+                'type': 'spinToStop',
+                'duration': 5,     // Duration in seconds.
+                'spins': 8,     // Number of complete spins.
+                'callbackFinished': alertPrize
+            }
+        });
+        function alertPrize(indicatedSegment) {
+            // Do basic alert of the segment text. You would probably want to do something more interesting with this information.
+            //alert("You have won " + indicatedSegment.text);
+            Swal.fire({
+                title: 'Hore',
+                text: 'Selamat Anda memenangkan' + indicatedSegment.text,
+                imageUrl: 'hadiah.png',
+                imageWidth: 250,
+                imageHeight: 250,
+                imageAlt: 'Custom image',
+            })
+        }
+        $(document).ready(function () {
+            $("#spin").click(function () {
+                // console.log(theWheel);
+                // calculatePrize();
+                Swal.fire({
+                    title: 'Masukan Kode',
+                    input: 'text',
+                    inputAttributes: {
+                        autocapitalize: 'off'
+                    },
+                    showCancelButton: true,
+                    confirmButtonText: 'Spin',
+                    showLoaderOnConfirm: true,
+                    preConfirm: (kode) => {
+                    },
+                    allowOutsideClick: () => !Swal.isLoading()
+                }).then((result) => {
+                    theWheel.startAnimation();
+                })
+            });
+        });
+    </script>
+</body>
+
+</html>
